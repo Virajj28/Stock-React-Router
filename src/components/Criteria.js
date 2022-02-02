@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../Context";
+import SubCriteria from "./SubCriteria"
 
 const Criteria = () => {
   const params = useParams();
@@ -29,8 +30,8 @@ const Criteria = () => {
     <>
       <div className="card-item">{singleData.name}</div>
       {singleData.criteria.map((cr, idx) => (
-        <div key={idx} className="card-criteria">
-          {cr.text}
+        <div className="card-criteria">
+          <SubCriteria key={idx} cr={cr} className="card-criteria"/>
         </div>
       ))}
     </>
