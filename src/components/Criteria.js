@@ -8,6 +8,7 @@ const Criteria = () => {
   const { data } = useContext(DataContext);
   let singleData = null;
   // console.log(params, data);
+  
   data.map((ele) => {
     if (
       ele.name

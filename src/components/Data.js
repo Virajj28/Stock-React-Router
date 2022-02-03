@@ -7,30 +7,31 @@ const Data = () => {
 
     const navigate = useNavigate();
   
-    const handleClick = (data) => {
+    const handleClick = (ele) => {
       navigate(
-        `/page/${data.name.split(" ").splice(0, 2).join("_").toLowerCase()}`,
+        `/page/${ele.name.split(" ").splice(0, 2).join("_").toLowerCase()}`,
       );
     };
   
     return (
       <div>
-        {data.map((data) => (
+        {data.map((ele) => (
           <div className="card-item">
           <div
             className="card-item-header"
-            key={data.id}
+            key={ele.id}
             onClick={() => {
-              handleClick(data);
+              handleClick(ele);
             }}
           >
-            {data.name}
-          </div>
-          <div
-            style={{color: data.color}}
-            className="card-item-body"
-          >
-            {data.tag}
+            {ele.name}
+            
+            <div
+              style={{color: ele.color}}
+              className="card-item-body"
+            >
+              {ele.tag}
+            </div>
           </div>
         </div>
         ))}

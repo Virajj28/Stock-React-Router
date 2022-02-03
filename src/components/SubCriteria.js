@@ -19,15 +19,17 @@ const SubCriteria = ({ cr }) => {
     {
       replaceText = 
       `<a href='/page'> 
-        (${
-          cr.variable[ele.name].default_value
-        }) 
+        (
+          ${cr.variable[ele.name].default_value}
+        ) 
       </a>`;
     } else 
     {
       replaceText = 
         `<a href='/page'>
-          (${cr.variable[ele.name].values[0]})
+          (
+            ${cr.variable[ele.name].values[0]}
+          )
         </a>`;
     }
     
