@@ -8,7 +8,7 @@ export function DataContextProvider({ children }) {
 
     const getData = async () => {
         const response = await axios.get(
-        "https://mobile-app-challenge.herokuapp.com/data"
+        "http://www.coding-assignment.bombayrunning.com/data.json"
         );
         setData(response.data);
     };
