@@ -10,7 +10,7 @@ export function DataContextProvider({ children }) {
         const response = await axios.get(
         "http://www.coding-assignment.bombayrunning.com/data.json"
         );
-        setData(response.data);
+        setData(response.text);
     };
 
     useEffect(() => {
